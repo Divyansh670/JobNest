@@ -1,0 +1,110 @@
+.jobs-page {
+  padding: var(--spacing-8) 0 var(--spacing-16);
+}
+
+.jobs-header {
+  margin-bottom: var(--spacing-6);
+  text-align: center;
+}
+
+.jobs-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: var(--spacing-2);
+}
+
+.title-icon {
+  margin-right: var(--spacing-2);
+  color: var(--primary-600);
+}
+
+.jobs-description {
+  font-size: 1.125rem;
+  color: var(--neutral-600);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.jobs-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-6);
+}
+
+.jobs-count {
+  margin-bottom: var(--spacing-4);
+  padding: var(--spacing-3) 0;
+  border-bottom: 1px solid var(--neutral-200);
+  font-weight: 500;
+  color: var(--neutral-700);
+}
+
+.jobs-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-6);
+}
+
+.jobs-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-12) 0;
+  color: var(--neutral-600);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--primary-100);
+  border-top: 3px solid var(--primary-600);
+  border-radius: 50%;
+  margin-bottom: var(--spacing-4);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.no-jobs-found {
+  text-align: center;
+  padding: var(--spacing-12) 0;
+  background-color: white;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.no-jobs-found h3 {
+  font-size: 1.5rem;
+  color: var(--neutral-800);
+  margin-bottom: var(--spacing-3);
+}
+
+.no-jobs-found p {
+  color: var(--neutral-600);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .jobs-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .jobs-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .jobs-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,536 @@
+.home {
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-700) 0%, var(--primary-900) 100%);
+  color: white;
+  padding: var(--spacing-16) 0 0;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: var(--spacing-10);
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: var(--spacing-4);
+  line-height: 1.2;
+  animation: fadeIn 1s ease, slideUp 1s ease;
+}
+
+.text-highlight {
+  color: var(--red-400);
+  position: relative;
+  display: inline-block;
+}
+
+.text-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: var(--red-500);
+  opacity: 0.3;
+  border-radius: 3px;
+  z-index: -1;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto var(--spacing-8);
+  opacity: 0.9;
+  animation: fadeIn 1s ease 0.2s both, slideUp 1s ease 0.2s both;
+}
+
+.hero-search {
+  margin-bottom: var(--spacing-10);
+  animation: fadeIn 1s ease 0.4s both, slideUp 1s ease 0.4s both;
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-6);
+  animation: fadeIn 1s ease 0.6s both;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: 0.9375rem;
+  color: white;
+  opacity: 0.9;
+}
+
+.stat-item svg {
+  color: var(--red-400);
+}
+
+.hero-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 1;
+}
+
+.hero-wave svg {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 80px;
+}
+
+/* Featured Jobs Section */
+.featured-jobs {
+  padding: var(--spacing-12) 0;
+  background-color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-8);
+}
+
+.section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-500);
+  border-radius: 2px;
+}
+
+.text-center.section-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-link {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: var(--primary-600);
+  transition: all var(--transition-fast) ease;
+}
+
+.section-link:hover {
+  color: var(--primary-700);
+  transform: translateX(3px);
+}
+
+.section-link svg {
+  margin-left: var(--spacing-1);
+  transition: transform var(--transition-fast) ease;
+}
+
+.section-link:hover svg {
+  transform: translateX(3px);
+}
+
+.featured-jobs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-6);
+}
+
+/* How It Works Section */
+.how-it-works {
+  padding: var(--spacing-16) 0;
+  background-color: var(--neutral-50);
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--neutral-600);
+  max-width: 700px;
+  margin: 0 auto var(--spacing-10);
+  line-height: 1.6;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-8);
+  margin-bottom: var(--spacing-10);
+}
+
+.step {
+  background-color: white;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: all var(--transition-normal) ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-500), var(--red-500));
+}
+
+.step-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: var(--primary-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-4);
+  color: var(--primary-600);
+  transition: all var(--transition-normal) ease;
+}
+
+.step:hover .step-icon {
+  background: var(--primary-100);
+  transform: scale(1.1);
+}
+
+.step-title {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-3);
+  color: var(--neutral-900);
+}
+
+.step-description {
+  color: var(--neutral-600);
+  line-height: 1.6;
+}
+
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--spacing-8);
+}
+
+.btn-cta {
+  padding: var(--spacing-3) var(--spacing-6);
+  font-size: 1.125rem;
+  background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-700) 100%);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-normal) ease;
+  box-shadow: 0 4px 14px rgba(0, 102, 255, 0.3);
+}
+
+.btn-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 102, 255, 0.4);
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  padding: var(--spacing-16) 0;
+  background-color: white;
+}
+
+.choose-us-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-8);
+  align-items: center;
+}
+
+.choose-us-text {
+  order: 2;
+}
+
+.choose-us-image {
+  order: 1;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.choose-us-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--transition-slow) ease;
+}
+
+.choose-us-image:hover img {
+  transform: scale(1.03);
+}
+
+.benefits-list {
+  list-style: none;
+  margin-top: var(--spacing-6);
+}
+
+.benefit-item {
+  display: flex;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+  padding: var(--spacing-4);
+  background-color: var(--neutral-50);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-normal) ease;
+}
+
+.benefit-item:hover {
+  background-color: var(--primary-50);
+  transform: translateX(5px);
+}
+
+.benefit-item svg {
+  color: var(--primary-600);
+  flex-shrink: 0;
+  margin-top: var(--spacing-1);
+}
+
+.benefit-item h3 {
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-1);
+  color: var(--neutral-900);
+}
+
+.benefit-item p {
+  color: var(--neutral-600);
+  margin-bottom: 0;
+  font-size: 0.9375rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: var(--spacing-16) 0;
+  background-color: var(--neutral-50);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-6);
+  margin-top: var(--spacing-8);
+}
+
+.testimonial-card {
+  background-color: white;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal) ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.testimonial-content {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--neutral-700);
+  margin-bottom: var(--spacing-4);
+  position: relative;
+}
+
+.testimonial-content::before {
+  content: '"';
+  font-size: 4rem;
+  line-height: 1;
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  color: var(--primary-100);
+  z-index: 0;
+  opacity: 0.7;
+}
+
+.testimonial-content p {
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.author-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.author-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.author-info h4 {
+  font-size: 1rem;
+  margin: 0 0 var(--spacing-1);
+  color: var(--neutral-900);
+}
+
+.author-info p {
+  font-size: 0.875rem;
+  color: var(--neutral-600);
+  margin: 0;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: var(--spacing-12) 0;
+  background: linear-gradient(135deg, var(--primary-700) 0%, var(--primary-900) 100%);
+  color: white;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-3);
+}
+
+.cta-content p {
+  font-size: 1.125rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto var(--spacing-8);
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.cta-buttons .btn {
+  background-color: var(--red-600);
+  font-weight: 600;
+  padding: var(--spacing-3) var(--spacing-6);
+}
+
+.cta-buttons .btn:hover {
+  background-color: var(--red-700);
+}
+
+.cta-buttons .btn-secondary {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-weight: 600;
+  padding: calc(var(--spacing-3) - 2px) var(--spacing-6);
+}
+
+.cta-buttons .btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); }
+  to { transform: translateY(0); }
+}
+
+/* Media Queries */
+@media (min-width: 640px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .featured-jobs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cta-buttons {
+    flex-direction: row;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .steps-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .choose-us-content {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .choose-us-text {
+    order: 1;
+  }
+  
+  .choose-us-image {
+    order: 2;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+  
+  .featured-jobs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

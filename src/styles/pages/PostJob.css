@@ -1,0 +1,143 @@
+.post-job-page {
+  padding: var(--spacing-8) 0 var(--spacing-16);
+}
+
+.post-job-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-8);
+}
+
+.post-job-header {
+  text-align: center;
+  margin-bottom: var(--spacing-8);
+}
+
+.post-job-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: var(--spacing-2);
+}
+
+.post-job-header p {
+  font-size: 1.125rem;
+  color: var(--neutral-600);
+}
+
+.post-job-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.form-section {
+  border-bottom: 1px solid var(--neutral-200);
+  padding-bottom: var(--spacing-6);
+}
+
+.form-section h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--neutral-900);
+  margin-bottom: var(--spacing-4);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-4);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-2);
+  font-weight: 500;
+  color: var(--neutral-700);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: var(--spacing-3);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: all var(--transition-fast) ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-400);
+  box-shadow: 0 0 0 3px var(--primary-100);
+  outline: none;
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+  border-color: var(--red-500);
+}
+
+.error-message {
+  color: var(--red-600);
+  font-size: 0.875rem;
+  margin-top: var(--spacing-1);
+}
+
+.form-help {
+  font-size: 0.875rem;
+  color: var(--neutral-500);
+  margin-top: var(--spacing-2);
+  line-height: 1.5;
+}
+
+.form-actions {
+  display: flex;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-4);
+}
+
+.form-actions .btn,
+.form-actions .btn-secondary {
+  flex: 1;
+  max-width: 200px;
+}
+
+.success-message {
+  text-align: center;
+  padding: var(--spacing-8) var(--spacing-4);
+  animation: fadeIn var(--transition-normal) ease;
+}
+
+.success-message h2 {
+  font-size: 1.5rem;
+  color: var(--success-500);
+  margin-bottom: var(--spacing-4);
+}
+
+.success-message p {
+  color: var(--neutral-700);
+  margin-bottom: var(--spacing-2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (min-width: 640px) {
+  .form-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

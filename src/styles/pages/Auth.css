@@ -1,0 +1,7 @@
+.auth-page {
+  padding: var(--spacing-12) 0;
+  min-height: calc(100vh - 70px - 300px);
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--primary-50) 0%, var(--neutral-50) 100%);
+}
